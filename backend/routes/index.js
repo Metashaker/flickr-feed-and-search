@@ -1,19 +1,16 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
+const axios = require('axios');
+const Flickr = require('flickr-sdk');
 
-/* GET home page. */
-router.get('/', (req, res, next) => {
-  res.send('respond with a resource');
-});
+const feedController = require('../controllers/feed');
 
-router.get('/feed', (req, res, next) => {
-  res.send('respond with a feed');
-});
+const feeds = Flickr.Feeds();
+
+router.get('/feed', feedController);
 
 router.get('/search', (req, res, next) => {
   res.send('respond with search result');
 });
-
-
 
 module.exports = router;
