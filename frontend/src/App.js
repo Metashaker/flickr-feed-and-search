@@ -1,7 +1,15 @@
+import React, { useContext, useEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { AppContext } from './context/Context';
 
 function App() {
+  const { getInitialFeed, feed } = useContext(AppContext);
+
+  useEffect(() => {
+    getInitialFeed();
+  }, [feed]);
+
   return (
     <div className="App">
       <header className="App-header">
