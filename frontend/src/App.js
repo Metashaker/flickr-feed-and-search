@@ -1,22 +1,13 @@
-import React, { useContext, useEffect } from 'react';
+import React from 'react';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import tw from 'twin.macro';
 import styled from 'styled-components';
-import logo from './logo.svg';
-import './App.css';
-import { AppContext } from './context/Context';
 
 function App() {
-  const { getInitialFeed } = useContext(AppContext);
-
-  useEffect(() => {
-    getInitialFeed();
-  }, []);
-
   return (
     <StyledApp className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+
         <p>
           Edit
           {' '}
