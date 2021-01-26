@@ -1,4 +1,7 @@
 import React, { useContext, useEffect } from 'react';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import tw from 'twin.macro';
+import styled from 'styled-components';
 import logo from './logo.svg';
 import './App.css';
 import { AppContext } from './context/Context';
@@ -11,7 +14,7 @@ function App() {
   }, [feed]);
 
   return (
-    <div className="App">
+    <StyledApp className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -30,8 +33,12 @@ function App() {
           Learn React
         </a>
       </header>
-    </div>
+    </StyledApp>
   );
 }
+
+const StyledApp = styled.div`
+${tw`w-6/12`}
+`;
 
 export default App;
