@@ -19,6 +19,9 @@
     "react-dom": "^17.0.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
+    "styled-components": "^5.2.1",
+    "tailwindcss": "^2.0.2",
+    "twin.macro": "^2.1.1",
     "web-vitals": "^0.2.4"
   },
   "scripts": {
@@ -27,6 +30,12 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "babelMacros": {
+    "twin": {
+        "config": "./src/tailwind.config.js",
+        "preset": "styled-components"
+    }
+},
   "eslintConfig": {
     "extends": [
       "react-app",
