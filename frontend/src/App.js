@@ -7,11 +7,11 @@ import './App.css';
 import { AppContext } from './context/Context';
 
 function App() {
-  const { getInitialFeed, feed } = useContext(AppContext);
+  const { getInitialFeed } = useContext(AppContext);
 
   useEffect(() => {
     getInitialFeed();
-  }, [feed]);
+  }, []);
 
   return (
     <StyledApp className="App">
