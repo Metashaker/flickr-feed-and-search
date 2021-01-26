@@ -38,7 +38,7 @@ function App() {
 }
 
 const StyledApp = styled.div`
-${tw`w-6/12`}
+${tw`w-6/12 bg-gray-300`}
 `;
 
 export default App;
