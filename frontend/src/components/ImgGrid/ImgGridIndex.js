@@ -12,10 +12,7 @@ const ImgGridIndex = () => {
   return (
     <ImageGrid>
       {feed?.data?.map((el) => (
-        <img
-          style={{
-            alignSelf: 'center', alignItems: 'center', justifyItems: 'center', justifySelf: 'center',
-          }}
+        <ImgCard
           src={el.media.m}
           loading="lazy"
           alt="feed-content"
@@ -26,7 +23,6 @@ const ImgGridIndex = () => {
 };
 
 const ImageGrid = styled.div`
-
 width: 100%;
 padding:0;
 margin: 0;
@@ -43,6 +39,10 @@ grid-row-gap: 15px;
   grid-template-columns: repeat(1, 1fr);
   grid-row-gap: 20px;
 }
+`;
+const ImgCard = styled.img`
+align-self: center;
+justify-self: center;
 `;
 
 export default ImgGridIndex;
