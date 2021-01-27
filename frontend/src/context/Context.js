@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import React, { createContext, useState } from 'react';
 import axios from 'axios';
+import { feedEndpoint, tagFeedEndpoint } from '../api/Api';
 
 const defaultValues = {
   getInitialFeed: () => {},
@@ -18,7 +19,7 @@ const AppProvider = ({ children }) => {
 
   const getInitialFeed = async () => {
     try {
-      const feedRes = await axios('http://localhost:3000/feed');
+      const feedRes = await axios(feedEndpoint);
       setFeed(feedRes);
     } catch (e) {
       console.error(e);
@@ -27,7 +28,7 @@ const AppProvider = ({ children }) => {
 
   const getTagFeed = async () => {
     try {
-      const feedRes = await axios(`http://localhost:3000/search?tag=${tag}`);
+      const feedRes = await axios(`${tagFeedEndpoint}?tag=${tag}`);
       setFeed(feedRes);
     } catch (e) {
       console.error(e);
