@@ -5,13 +5,14 @@ import styled from 'styled-components';
 import ImgGridIndex from '../components/ImgGrid/ImgGridIndex';
 
 const IndexRoute = () => (
-  <IndexContainer className="App">
+  <IndexContainer>
     <ImgGridIndex />
   </IndexContainer>
 );
 
 const IndexContainer = styled.div`
 ${tw`w-screen pt-10 `}
+overflow: hidden;
 `;
 
 export default IndexRoute;
