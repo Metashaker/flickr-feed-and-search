@@ -8,7 +8,7 @@ const searchController = async (req, res, next) => {
   const feedPhotos = feeds.publicPhotos();
   const endpointBase = feedPhotos.url;
   try {
-    const feed = await axios.get(`${endpointBase}?format=json&nojsoncallback=1?tags=${tag}`);
+    const feed = await axios.get(`${endpointBase}?format=json&nojsoncallback=1&tags=${tag}`);
     const feedContent = feed.data.items;
     res.send(feedContent).status(200);
   } catch (e) {

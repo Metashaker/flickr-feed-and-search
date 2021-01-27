@@ -29,7 +29,7 @@ const ImageGrid = styled.div`
 
 width: 100%;
 padding:0;
-margin-top: 0;
+margin: 0;
 display: grid;
 grid-template-columns: repeat(4, 1fr);
 grid-template-rows: repeat(5, 1fr);

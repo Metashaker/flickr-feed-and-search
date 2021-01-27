@@ -6,6 +6,7 @@ const defaultValues = {
   getInitialFeed: () => {},
   getTagFeed: () => {},
   setTag: () => {},
+  tag: '',
   feed: [],
 };
 
@@ -26,7 +27,7 @@ const AppProvider = ({ children }) => {
 
   const getTagFeed = async () => {
     try {
-      const feedRes = await axios(`http://localhost:3000/tag?tag=${tag}`);
+      const feedRes = await axios(`http://localhost:3000/search?tag=${tag}`);
       setFeed(feedRes);
     } catch (e) {
       console.error(e);
@@ -34,7 +35,7 @@ const AppProvider = ({ children }) => {
   };
   return (
     <AppContext.Provider value={{
-      getInitialFeed, getTagFeed, setTag, feed,
+      getInitialFeed, getTagFeed, setTag, tag, feed,
     }}
     >
       {children}
