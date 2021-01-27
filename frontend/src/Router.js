@@ -5,15 +5,18 @@ import './styles/index.css';
 import IndexRoute from './pages/index';
 import AppProvider from './context/Context';
 import GlobalStyles from './styles/GlobalStyles';
+import LayoutIndex from './layout/LayoutIndex';
 
 const AppRouter = () => (
 
   <AppProvider>
     <GlobalStyles />
     <BrowserRouter>
-      <Switch>
-        <Route path="/" component={IndexRoute} exact />
-      </Switch>
+      <LayoutIndex>
+        <Switch>
+          <Route path="/" component={IndexRoute} exact />
+        </Switch>
+      </LayoutIndex>
     </BrowserRouter>
   </AppProvider>
 );
