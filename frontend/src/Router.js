@@ -1,7 +1,8 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import './index.css';
-import App from './App';
+// eslint-disable-next-line spaced-comment
+//import './index.css';
+import IndexRoute from './pages/index';
 import AppProvider from './context/Context';
 
 const AppRouter = () => (
@@ -9,7 +10,7 @@ const AppRouter = () => (
   <AppProvider>
     <BrowserRouter>
       <Switch>
-        <Route path="/" component={App} exact />
+        <Route path="/" component={IndexRoute} exact />
       </Switch>
     </BrowserRouter>
   </AppProvider>
