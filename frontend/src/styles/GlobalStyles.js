@@ -28,7 +28,6 @@ html, body {
     text-center
     pb-4
     pt-4
-    ml-4
     `}
   cursor: pointer;
   border-style: none;
@@ -41,6 +40,10 @@ html, body {
     background-color: #a6a6a6;
   }
   @media (max-width: 767px) {
+    ${tw`
+    pb-3
+    pt-3
+    `}
     font-size: 14px;
   }
 }

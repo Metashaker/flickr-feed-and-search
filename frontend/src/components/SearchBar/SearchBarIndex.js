@@ -49,8 +49,6 @@ const SearchButton = styled.button`
     `}
   @media (max-width: 767px) {
     ${tw`
-    pb-3
-    pt-3
     ml-0
     `}
   }
