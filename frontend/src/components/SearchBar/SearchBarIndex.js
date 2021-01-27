@@ -1,13 +1,17 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
 import tw from 'twin.macro';
+import { AppContext } from '../../context/Context';
 
 const SearchBarIndex = () => {
-  console.log('wa');
+  const { setTag, getTagFeed } = useContext(AppContext);
   return (
     <SearchBarContainer>
-      <SearchInput />
-      <SearchButton>Search</SearchButton>
+      <SearchInput onChange={(e) => {
+        setTag(e.target.value);
+      }}
+      />
+      <SearchButton onClick={getTagFeed}>Search</SearchButton>
     </SearchBarContainer>
   );
 };
@@ -52,6 +56,7 @@ const SearchButton = styled.button`
     pt-4
     ml-4
     `}
+  cursor: pointer;
   border-style: none;
   color: #fff;
   width: 100px;
