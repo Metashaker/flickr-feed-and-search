@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 // eslint-disable-next-line spaced-comment
-//import './index.css';
+import './styles/index.css';
 import IndexRoute from './pages/index';
 import AppProvider from './context/Context';
 
