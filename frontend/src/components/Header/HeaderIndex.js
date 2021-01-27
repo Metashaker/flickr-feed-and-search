@@ -19,7 +19,6 @@ justify-center
 `}
 overflow: hidden;
 height: 12vh;
-
 `;
 
 const HeaderTitle = styled.h1`
