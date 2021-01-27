@@ -13,6 +13,7 @@ const ImgGridIndex = () => {
     <ImageGrid>
       {feed?.data?.map((el) => (
         <ImgCard
+          key={el.link}
           src={el.media.m}
           loading="lazy"
           alt="feed-content"
