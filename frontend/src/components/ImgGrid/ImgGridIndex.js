@@ -7,7 +7,6 @@ const ImgGridIndex = () => {
 
   useEffect(() => {
     getInitialFeed();
-    console.log(feed?.length);
   }, []);
 
   return (

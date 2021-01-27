@@ -28,7 +28,6 @@ const AppProvider = ({ children }) => {
     try {
       const feedRes = await axios(`http://localhost:3000/tag?tag=${tag}`);
       setFeed(feedRes);
-      console.log(feed);
     } catch (e) {
       console.error(e);
     }
