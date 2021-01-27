@@ -22,7 +22,6 @@ height: 12vh;
 
 `;
 
-// eslint-disable-next-line no-unused-vars
 const HeaderTitle = styled.h1`
 font-size: 36px;
 //up until ipad pro
