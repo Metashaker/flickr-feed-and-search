@@ -1,2 +1,2 @@
-export const feedEndpoint = 'http://localhost:3000/feed';
-export const tagFeedEndpoint = 'http://localhost:3000/search';
+export const feedEndpoint = 'https://fathomless-dusk-58312.herokuapp.com/feed';
+export const tagFeedEndpoint = 'https://fathomless-dusk-58312.herokuapp.com/feed';
