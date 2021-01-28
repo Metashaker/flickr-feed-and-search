@@ -16,7 +16,7 @@ app.set('view engine', 'jade');
 app.use(
   cors({
     credentials: false,
-    origin: 'http://localhost:3001',
+    origin: 'https://flickr-feed-and-search.netlify.app/',
   }),
 );
 app.use(logger('dev'));
